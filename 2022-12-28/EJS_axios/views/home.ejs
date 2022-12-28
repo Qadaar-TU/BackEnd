@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <h1>Movies</h1>
+    <% movies.forEach(movie => { %>
+    <div class="movie-<%= movie.id %>">
+      <h2><%= movie.title %></h2>
+      <p><%= movie.overview %></p>
+      <a href="/movies/<%= movie.id %>/credits">Show Credits &gt;</a>
+    </div>
+    <hr />
+    <% }) %>
+  </body>
+</html>

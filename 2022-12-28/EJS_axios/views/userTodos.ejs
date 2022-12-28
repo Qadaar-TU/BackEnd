@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% if(movie) { %>
+    <title>Credits of <%= movie.title %></title>
+    <% } else { %>
+    <title>No credits</title>
+    <% } %>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <% if(movie && credits.length > 0) { %>
+
+    <h1><%= movie.title %></h1>
+    <p><%= movie.overview %></p>
+    <hr />
+
+    <h1>Credits</h1>
+    <ul>
+      <% credits.forEach(credit => { %>
+      <li
+        id="credit-<%= credit.id %>"
+        class="<%= credit.character ? 'character-credit' : 'department-credit' %>"
+      >
+        <%= credit.name %>
+      </li>
+      <% })%>
+    </ul>
+
+    <% } else { %>
+
+    <h1>Movie Not Found!</h1>
+
+    <% } %>
+    <a href="/">&lt; Go Back</a>
+  </body>
+</html>

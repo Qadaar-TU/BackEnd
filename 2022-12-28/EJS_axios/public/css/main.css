@@ -1,0 +1,8 @@
+body {
+  background-color: wheat;
+}
+
+.completed-todo {
+  color: gray;
+  text-decoration: line-through;
+}
