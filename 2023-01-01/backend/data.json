@@ -1,0 +1,7 @@
+[
+  { "id": 1, "text": "Kochen", "done": true },
+  { "id": 2, "text": "ausruhen", "done": true },
+  { "id": 3, "text": "PC Saubermachen", "done": true },
+  { "id": 4, "text": "Git Lernen", "done": true },
+  { "id": 5, "text": "Sport machen", "done": true }
+]
